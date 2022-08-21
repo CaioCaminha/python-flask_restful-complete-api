@@ -1,11 +1,7 @@
 from flask_restful import Resource, reqparse
 from models.item import ItemModel
 
-from flask_jwt_extended import create_access_token
-from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
-from flask_jwt_extended import JWTManager
-
 class Item(Resource):
     parser = reqparse.RequestParser()
     parser.add_argument(
